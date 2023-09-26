@@ -9,5 +9,3 @@ bases:
 patches:
 - path: map.yaml
 
-spec:
-  replicas: 3
