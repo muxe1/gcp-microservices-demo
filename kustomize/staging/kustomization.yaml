@@ -7,11 +7,11 @@ bases:
   - ../base
 
 replicas:
-  - name: production-frontend
+  - name: staging-frontend
     count: 2
     
-  - name: production-paymentservice
+  - name: staging-paymentservice
     count: 2
     
-  - name: production-productcatalogservice
+  - name: staging-productcatalogservice
     count: 2
