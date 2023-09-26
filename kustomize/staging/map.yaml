@@ -1,6 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: the-staging
+  namespace: flux-system
 spec:
   replicas: 10
