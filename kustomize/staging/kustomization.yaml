@@ -6,12 +6,14 @@ namePrefix: staging-
 bases:
   - ../base
 
-replicas:
-  - name: staging-frontend
-    count: 4
-    
-  - name: staging-paymentservice
-    count: 4
-    
-  - name: staging-productcatalogservice
-    count: 4
+patches:
+  - patch: 
+      apiVersion: autoscaling/v2beta2
+      kind: HorizontalPodAutoscaler
+      metadata:
+        name: boutique
+      spec:
+        minReplicas: 3
+    target:
+      name: boutique
+      kind: HorizontalPodAutoscaler
