@@ -6,10 +6,6 @@ namePrefix: staging-
 bases:
 - ../base
 
-images:
-- name: boutique/boutique
-  newTag: staging
-
 patches:
 - path: map.yaml
 
