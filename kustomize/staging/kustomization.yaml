@@ -6,5 +6,12 @@ namePrefix: staging-
 bases:
   - ../base
 
-resources:
-  - hpa.yaml
+replicas:
+  - name: staging-frontend
+    count: 4
+    
+  - name: staging-paymentservice
+    count: 4
+    
+  - name: staging-productcatalogservice
+    count: 4
