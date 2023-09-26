@@ -1,12 +1,10 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namePrefix: staging-
-commonAnnatation:
- - Hello, IM STAGING
-metadata:
-  namespace: flux-system
-bases:
-- ../base
 
-spec:
-  replicas: 10
+namePrefix: staging-
+  
+bases:
+  - ../base
+
+resources:
+  - hpa.yaml
