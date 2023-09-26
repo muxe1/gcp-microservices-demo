@@ -5,6 +5,5 @@ metadata:
 bases:
 - ../base
 
-patches:
-- path: map.yaml
-
+spec:
+  replicas: 10
